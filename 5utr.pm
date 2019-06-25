@@ -44,7 +44,7 @@ limitations under the License.
  
 =cut
 
-package CADD;
+package 5utr;
 
 use strict;
 use warnings;
@@ -76,8 +76,9 @@ sub feature_types {
 sub get_header_info {
   my $self = shift;
   return {
-    CADD_PHRED => 'PHRED-like scaled CADD score',
-    CADD_RAW   => 'Raw CADD score'
+    delta_TE => 'predicted Transcriptional Efficiency change from reference',
+    delta_rG4 => 'predicted G4 MFE change from reference',
+    delta_dsRNA => 'predicted dsRNA MFEchange from reference'
   }
 }
 
@@ -115,7 +116,7 @@ sub run {
 
 sub parse_data {
   my ($self, $line) = @_;
-  my ($c, $s, $ref, $alt, $raw, $phred) = split /\t/, $line;
+  my ($c, $s, $ref, $alt, $dTE, $dG4, $dds) = split /\t/, $line;
 
   # do VCF-like coord adjustment for mismatched subs
   my $e = ($s + length($ref)) - 1;
@@ -136,8 +137,9 @@ sub parse_data {
     start => $s,
     end => $e,
     result => {
-      CADD_RAW   => $raw,
-      CADD_PHRED => $phred
+      delta_TE   => $dTE,
+      delta_rG4 => $dG4,
+      delta_dsRNA => $dds
     }
   };
 }
