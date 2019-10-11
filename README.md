@@ -17,4 +17,4 @@ Instaed of 'ALL' you can specify columns from Sutr.tsv.gz to be included in the 
 
 ## Annotations
 
-To be updated. If interested please contact me at sander.pajusalu@yale.edu
+The annotations files can be accessed [here](https://drive.google.com/drive/folders/1C8Z5x_Z4i_USayYVlVQWrhnRclYivnS1?usp=sharing).
