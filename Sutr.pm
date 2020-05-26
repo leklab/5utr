@@ -257,11 +257,11 @@ sub run {
   my $chr = ($vf->{chr} =~ /MT/i) ? 'M' : $vf->{chr};
   foreach my $tmp_data(@{$self->get_data($chr, $vf->{start} - 1, $vf->{end})}) {
     # compare allele and transcript
-    if ($assembly eq 'GRCh37') {
+    if ($assembly eq 'GRCh37' || $assembly eq 'GRCh38') {
       if (exists $tmp_data->{'pos'}) {
         $pos = $tmp_data->{'pos'}
       } else {
-        die "Sutr file does not contain required columns (pos) to use with GRCh37";
+        die "Sutr file does not contain required columns (pos) to use with GRCh37/GRCh38";
         }
     }
     next unless
