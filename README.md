@@ -29,7 +29,7 @@ The following annotations are available:
 
 **transcript**
 
-**distance** - distance from 
+**distance** - distance from main start codon of CDS. -1 marks the nearest base in 5'UTR, +1 is the first base of CDS (start codon).
 
 **AUG_event** - whether the variant creates a novel AUG (*AUG_gain*), removes the AUG in reference sequence (*AUG_loss*) or changes the position of AUG at the same locus (*AUG_change*)
 
