@@ -1,6 +1,8 @@
 # 5utr ['suter']
 Annotation resource/tool for 5'UTR variants
 
+Contact: Sander Pajusalu sander.pajusalu@yale.edu
+
 ***This tool is in active development***
 
 5utr is an [VEP](https://useast.ensembl.org/info/docs/tools/vep/index.html) plugin aiming to provide different annotations relevant to 5' UTR (untranslated region) variants.
